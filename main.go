@@ -1,7 +1,11 @@
 package main
 
-import "github.com/victornevesHS/go-rest-gin/routes"
+import (
+	"github.com/victornevesHS/go-rest-gin/database"
+	"github.com/victornevesHS/go-rest-gin/routes"
+)
 
 func main() {
-	routes.HandleReqiests()
+	database.ConectaComBancoDeDados()
+	routes.HandleRequests()
 }
